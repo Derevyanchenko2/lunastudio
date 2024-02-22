@@ -1,0 +1,89 @@
+.team {
+}
+.team-container {
+    max-width: 1290px;
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.team-heading {
+    margin-bottom: 102px;
+}
+.team-wrapper{
+    display: flex;
+    align-items: center;
+}
+.team-content {
+    max-width: 476px;
+    width: 100%;
+    margin-right: 61px;
+}
+
+.team-content__buttons {
+    margin-top: 50px;
+    max-width: 384px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.team-btn {
+    cursor: pointer;
+    padding: 26px 36px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 31px;
+
+}
+.gallery-link {
+    border: 3px solid #DC03A5;
+    background: transparent;
+}
+.fill-form-button {
+    background: linear-gradient(180deg, #5300FF 0%, #430DB4 100%);
+    box-shadow: 0px 4px 50px rgba(62, 6, 180, 0.51);
+    border: none;
+}
+//slider styles
+
+.swiper .team-swiper{
+    max-width: 593px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: visible;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    max-width: 431px;
+    min-height: 643px;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-wrapper {
+}
+.team-row {
+}
+.swiper-slide {
+}
+.team-slide {
+}
+.team-slide__image{
+    border-radius: 43px;
+}
+.swiper-slide-active .team-slide__image {
+    filter: drop-shadow(0px 4px 22px rgba(255, 255, 255, 0.54));
+}
+
+.swiper-button-next {
+}

@@ -1,0 +1,108 @@
+.faq {
+    position: relative;
+    padding-top: 111px;
+    padding-bottom: 65px;
+}
+.faq-decor{
+  &__girl{
+    right: 60px;
+    top: 37px;
+  }
+  &__butterfly{
+    top: 340px;
+    left: 0;
+  }
+}
+.faq-heading__title--big{
+  margin-bottom: -140px;
+} 
+.faq-heading {
+    text-align: center;
+    margin-bottom: 75px;
+}
+.faq-heading__text{
+  margin-top: 58px;
+}
+.faq-box {
+    padding: 50px 35px;
+    max-width: 1190px;
+    margin: 0 auto;
+    background: rgba(146, 0, 175, 0.1);
+    box-shadow: inset 35.8px -35.8px 35.8px rgba(165, 165, 165, 0.1), inset -35.8px 35.8px 35.8px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35.8px);
+    border-radius: 43px;
+}
+.accordion{
+  position: relative;
+  border-bottom: 1px solid #FFFFFF;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; 
+    width: 1102px;
+    height: 4px; 
+    box-shadow: 0px 4px 17px #FF00B7; 
+    z-index: -1;
+  }
+}
+.accordion-trigger {
+  background: none;
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border: none;
+  cursor: pointer;
+  padding: 19px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.accordion-trigger::after {
+  content: url('../images/faq-img/arrow-accordion.svg'); 
+  width: 32px; 
+  height: 32px; 
+  position: absolute;
+  right: 34px;
+  transition: transform 0.2s ease; 
+  transform-origin: center; 
+}
+
+.accordion.open .accordion-trigger::after {
+  transform: scaleY(-1); 
+}
+
+.accordion-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.accordion.open .accordion-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.accordion-content__inner {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.accordion-content__inner p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+  
