@@ -7,6 +7,10 @@
     position: relative;
     padding-top: 160px;
     padding-bottom: 225px;
+    @media(max-width:768px){
+        padding-top: 175px;
+        padding-bottom: 190px;
+    }
 }
 
 .main-decors{
@@ -17,6 +21,21 @@
     gap: 90px;
     right: 50px;
     bottom: 108px;
+    @media(max-width:1350px){
+        max-width: 280px;
+        right: 30px;
+    }
+    @media(max-width:1200px){
+        max-width: 250px;
+        bottom: 150px;
+    }
+    @media(max-width:992px){
+        max-width: 160px;
+        top: 50px;
+    }
+    @media(max-width:768px){
+        display: none;
+    }
 }
 .main-play {
     top: 104px;
@@ -26,7 +45,17 @@
     right: 100px;
     bottom: 50px;
 }
-
+.main-content{
+    @media (max-width:1350px){
+        max-width: 750px;
+    }
+    @media (max-width:1200px){
+        max-width: 605px;
+    }
+    @media (max-width:992px){
+        max-width: 505px;
+    }
+}
 .main-content__title {
     position: relative;
     font-family: 'Poiret One';
@@ -36,13 +65,35 @@
     line-height: 90px;
     color: #FFFFFF;
     margin-bottom: 22px;
+    @media(max-width:1200px){
+        font-size: 70px;
+        line-height: 80px;
+    }
+    @media(max-width:992px){
+       font-size: 37px;
+    }
+    @media(max-width:768px){
+        font-size: 24px;
+        line-height: 28px;
+    }
+   
 }
 
 .luna-studio {
     margin-bottom: 53px;
+    @media(max-width:1200px){
+        margin-bottom: 30px;
+    }
     img{
         max-width: 793px;
         width: 100%;
+        @media(max-width:768px){
+            max-width: 400px;
+        }
+        @media(max-width:460px){
+            max-width: 316px;
+            max-height: 132px;
+        }
     }
 }
 .main-content__text {
@@ -54,6 +105,14 @@
     font-size: 32px;
     line-height: 39px;
     color: #FFFFFF;
+    @media(max-width:992px){
+        font-size: 23px;
+        line-height: 37px;
+    }
+    @media(max-width:768px){
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 .main-link__container {
     display: flex;
@@ -71,6 +130,9 @@
     text-align: center;
     color: #FFFFFF;
     transition: 0.3s all;
+    @media(max-width:992px){
+        font-size: 23px;
+    }
     &:hover{
         transition: 0.3s all;
         color: #FF00B7;
