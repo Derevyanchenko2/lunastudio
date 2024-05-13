@@ -1,134 +1,194 @@
 .recording {
     position: relative;
     padding: 105px 0;
+    @media(max-width:992px){
+        padding: 90px 0;
+    }
+    @media(max-width:768px){
+        padding: 75px 0;
+    }
 }
-
 .recording-container {
     max-width: 1220px;
     padding: 0 15px;
     margin: 0 auto;
 }
-
 .recording-decor__girl {
     bottom: -50px;
     left: 0;
     max-height: 586px;
+    @media(max-width:1200px){
+        bottom: 20px;
+        left: 0;
+        max-height: 405px;
+    }
 }
-
 .recording-decor__butterfly {
     bottom: 0;
     left: 256px;
 }
-
+.recording-decor__girl, .recording-decor__butterfly{
+    @media(max-width:992px){
+      display: none;  
+    }
+}
+.anime-girl--mobile{
+    display: none;
+    @media(max-width:992px){
+        display: block;
+        right: 0;
+        top: 350px;
+    }
+    @media(max-width:768px){
+        display: block;
+        right: 0;
+        top: 160px;
+    }
+}
 .section-title--big {
     margin-bottom: -88px;
 }
-
 .recording-wrapper {
     margin-top: 88px;
     display: flex;
+    @media(max-width:992px){
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+    @media(max-width:768px){
+        margin-top: 40px;
+    }
 }
-
 .recording-content {
     max-width: 519px;
     width: 100%;
     margin-right: 45px;
+    @media(max-width:992px){
+       margin-bottom: 40px;
+       margin-right: 0;
+    }
 }
-
-.recording-content__text {
-    margin-bottom: 50px;
-}
-
 .recording-content__info {
     padding-left: 120px;
+    @media(max-width:1200px){
+        padding-left: 0;
+    }
 }
-
 .recording-info__tel,
 .recording-info__address {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
-    color: #FFFFFF;
 }
 
 .recording-info__tel {
     display: block;
-    margin-bottom: 50px;
+    margin: 50px 0;
     font-size: 40px;
     line-height: 49px;
     text-shadow: 0px 4px 17px #FF00B7;
+    @media(max-width:1200px){
+        margin: 35px 0;
+    }
+    @media(max-width:768px){
+        margin: 16px 0;
+        font-weight: 400;
+        font-size: 24px;
+    }
 }
-
 .recording-info__address {
     font-size: 24px;
     line-height: 29px;
+    @media(max-width:1200px){
+        margin: 35px 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    @media(max-width:1200px){
+        margin: 0;
+    }
 }
-
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 .registration-form__wrapper {
     max-width: 626px;
     width: 100%;
 }
-
+.registration-input__number{
+    &--mobile{
+        display: none;
+        @media(max-width:768px){
+            display: block;
+        }
+    }
+    @media(max-width:768px){
+        display: none;
+    }
+}
 .registration-form__group {
     display: flex;
     align-items: center;
     gap: 30px;
     max-height: 62px;
 }
-
+@media (max-width: 768px) {
+    .registration-form__group {
+        flex-direction: column;
+    }
+    .registration-form__input {
+        margin-bottom: 16px; 
+    }
+}
 .registration-form__group--first {
     margin-bottom: 24px;
+    @media(max-width:768px){
+        flex-wrap: wrap;
+        
+    }
 }
-
 .registration-form__group--first input {
     max-width: 297px;
     width: 100%;
+    @media(max-width:768px){
+        max-width: 100%;
+    }
 }
 
 .registration-input {
-    &::placeholder {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
-        opacity: 0.5;
-        transition: all 0.3s ease;
-    }
-
     padding: 23px;
     width: 100%;
     background: rgba(255, 0, 183, 0.08);
     border: 1px solid #FF00B7;
     border-radius: 15px;
     box-shadow: 0px 4px 17px rgba(255, 0, 183, 0.08);
+    &::placeholder {
+        font-family : 'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        transition: all 0.3s ease;
+    }
 }
-
 .registration-input:focus::placeholder,
 .registration-input:not(:placeholder-shown)::placeholder {
     font-size: 12px;
     transform: translateY(-20px);
     opacity: 0.5;
 }
-
-.registration-input:valid {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #FFFFFF;
-}
-
 .registration-form__textarea {
     width: 100%;
     min-height: 256px;
     padding: 23px;
-    margin-top: 25px;
     outline: none;
 }
-
+.registration-input:valid {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
 .registration-consent {
     display: flex;
     align-items: center;
@@ -137,18 +197,19 @@
 }
 
 .registration-consent label {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #FFFFFF;
-    opacity: 0.5;
     position: relative;
     padding-left: 40px;
     cursor: pointer;
+    padding-top: 5px;
+    @media(max-height:768px){
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+    }
 }
-
 .registration-consent label:before {
     content: '';
     position: absolute;
@@ -159,16 +220,17 @@
     background: transparent;
     border: 1px solid rgba(255, 0, 183, 0.8);
     border-radius: 2px;
+    @media(max-height:768px){
+        width: 16px;
+        height: 16px;
+    }
 }
-
 .registration-consent label:hover:before {
     border-color: rgba(255, 0, 183, 0.8);
 }
-
 .registration-consent input[type="checkbox"] {
     display: none;
 }
-
 .registration-consent input[type="checkbox"]:checked + label:before {
     content: '\2714';
     font-size: 15px;
@@ -176,21 +238,22 @@
     text-align: center;
     line-height: 20px;
 }
-
 .recording-submit {
-    cursor: pointer;
     width: 100%;
     padding: 16px;
     border: none;
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 29px;
     text-align: center;
-    color: #FFFFFF;
     transition: 0.3s all;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
 
 
 

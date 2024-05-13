@@ -1,0 +1,63 @@
+<section class="calculator">
+    <div class="calculator-decor">
+        <img class="decor-img calculator-decor__girl" src="./images/calculator-img/girl.png" alt="girl decor">
+        <img class="decor-img calculator-decor__circle--right" src="./images/calculator-img/circle-right.png" alt="circle decor">
+        <img class="decor-img calculator-decor__circle--left" src="./images/calculator-img/circle-left.png" alt="circle decor">
+        <img class="decor-img calculator-decor__butterfly--box" src="./images/calculator-img/butterfly-icn/butterfly-in-box.png" alt="butterfly">
+        <img class="decor-img calculator-decor__butterfly--under" src="./images/calculator-img/butterfly-icn/butterfly-under.png" alt="butterfly">
+        <img class="decor-img calculator-decor__butterfly--left" src="./images/calculator-img/butterfly-icn/butterfly-left.png" alt="butterfly">
+    </div>
+    <div class="container">
+        <div class="calculator-heading">
+            <h2 class="calculator-heading__title section-title--big">Калькулятор</h2>
+            <h2 class="section-title">Онлайн-калькулятор</h2>
+        </div>
+        <div class="calculator-wrapper">
+            <div class="calculator-box">
+                <p class="calculator-box__heading">
+                    Многие девушки приходят к нам в трудном финансовом положении, но, работая в Luna Studio, они быстро закрывают любой кредит.
+                </p>
+                <div class="calculator-box__wrapper">
+                    <div class="calculator-box__selection">
+                        <label class="calculator-box__label section-text" for="basicLanguage">Знание английского:</label>
+                        <div class="calculator-box__btns">
+                            <button class="calculator-box__btn" onclick="selectLanguage('basic')" id="basicLanguage">Базовый</button>
+                            <button class="calculator-box__btn" onclick="selectLanguage('intermediate')" id="intermediateLanguage">На 4-ку</button>
+                            <button class="calculator-box__btn" onclick="selectLanguage('fluent')" id="fluentLanguage">Разговорный</button>
+                        </div>
+                        <label class="calculator-box__label section-text">Время смен:</label>
+                        <div class="calculator-box__btns">
+                            <button class="calculator-box__btn" onclick="selectShift('morning')" id="morningShift">Утренняя</button>
+                            <button class="calculator-box__btn" onclick="selectShift('day')" id="dayShift">Дневная</button>
+                            <button class="calculator-box__btn" onclick="selectShift('night')" id="nightShift">Ночная</button>
+                        </div>                        
+                        <label class="calculator-box__label section-text" for="4shifts">Смен в неделю:</label>
+                        <div class="calculator-box__btns"> 
+                            <button class="calculator-box__btn" onclick="selectShiftsPerWeek(4)" id="4shifts">4</button>
+                            <button class="calculator-box__btn" onclick="selectShiftsPerWeek(5)" id="5shifts">5</button>
+                            <button class="calculator-box__btn" onclick="selectShiftsPerWeek(6)" id="6shifts">6</button>
+                        </div>                        
+                    </div>
+                    <div class="calculator-box__prices">
+                        <h3 class="calculator-box__prices-title">Итого твой заработок:</h3>
+                        <div class="calculator-prices__item calculator-prices__item--week">
+                            <label class="section-text" for="weeklyEarnings">В неделю:</label>
+                            <p class="calculator-prices__earnings"> <span id="weeklyEarnings"></span> ₴</p>
+                        </div>                       
+                        <div class="calculator-prices__item calculator-prices__item--month">
+                            <label class="section-text" for="monthlyEarnings">В месяц:</label>
+                            <p class="calculator-prices__earnings"> <span id="monthlyEarnings"></span> ₴</p>
+                        </div>     
+                        <div class="calculator-prices__item calculator-prices__item--year">
+                            <label class="section-text" for="yearlyEarnings">В год:</label>
+                            <p class="calculator-prices__earnings"> <span id="yearlyEarnings"></span> ₴</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="calculator-box__btn-container">
+                    <button class="BigBtn btn">Начать зарабатывать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

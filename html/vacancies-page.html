@@ -16,25 +16,22 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Swiper CSS -->
-
-
 </head>
     <body>
-        <section class="main-section">
-            @@include('sections/header.html')
-            @@include('sections/main.html')
-        </section>
-        @@include('sections/advantages.html')
-        @@include('sections/calculator.html')
+        @@include('sections/header.html')
+        <div class="section-job">
+            @@include('sections/job.html')
+            <!-- modal-window -->
+            @@include('sections/ModalModel.html')
+            @@include('sections/ModalAdmin.html')
+            @@include('sections/ModalAgent.html')
+        </div>
+        @@include('sections/gifts.html')
         @@include('sections/recording.html')
-        @@include('sections/about.html')
-        @@include('sections/team.html')
-        @@include('sections/reviews.html')
-        @@include('sections/faq.html')
         @@include('sections/footer.html')
         
         <!-- ===Scripting In=== -->
-        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
     </body>

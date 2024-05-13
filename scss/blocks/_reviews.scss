@@ -36,37 +36,44 @@
     box-shadow: 0px 4px 31px rgba(57, 3, 63, 0.07), inset 35.8px -35.8px 35.8px rgba(165, 165, 165, 0.1), inset -35.8px 35.8px 35.8px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(35.8px);
     border-radius: 43px;
+    @media(max-width:768px){
+        width: 294px;
+    }
 }
 .reviews-column__img {
+    max-width: 130px;
     img{
+        width: 100%;
         top: -105px;
     }
     margin-bottom: 15px;
 }
 .reviews-column__info {
     margin-bottom: 32px;
+    @media(max-width:768){
+        margin-bottom: 10px;
+    }
 }
 .reviews-column__info-name {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 64px;
-    line-height: 78px;
     text-align: center;
-    color: #FFFFFF;
     margin-bottom: 20px;
+    @media(max-width:768px){
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
 }
 .reviews-column__info-experience {
     font-family: 'Poiret One';
-    font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    line-height: 33px;
     text-align: center;
     color: #FFFFFF;
+    @media(max-width:768px){
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+    };
 }
-.reviews-item__text {
-}
-.slider-text {
-}
-

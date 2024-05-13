@@ -5,18 +5,31 @@
     max-width: 1260px;
     padding: 0 15px;
     margin: 0 auto;
+
 }
 .about-content__text{
     margin-bottom: 43px;
 }
 .about-wrapper {
     display: flex;
+    @media(max-width:1200px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .about-content {
     max-width: 620px;
     width: 100%;
     margin-right: 54px;
     margin-top: 120px;
+    @media(max-width:1200px){
+       margin-right: 0;
+       max-width: 100%;
+       margin-bottom: 60px;
+    }
+    @media(max-width:768px){
+        margin-top: 30px;
+    }
 }
 .about-list__item {
     display: flex;
@@ -27,9 +40,17 @@
 }
 .about-list__item-icn {
     margin-right: 51px;
+    @media(max-width:768px){
+        margin-right: 25px;
+    }
 }
 .about-images{
     position: relative;
+    img{
+        @media(max-width:768px){
+          max-width: 356px;
+        }
+    }
 }
 .about-img__butterfly{
     position: absolute;

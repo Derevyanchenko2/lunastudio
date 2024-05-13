@@ -49,11 +49,8 @@
 .accordion-trigger {
   background: none;
   width: 100%;
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 29px;
   color: #FFFFFF;
   border: 2px solid #FFFFFF;
   border: none;
@@ -64,7 +61,6 @@
   justify-content: space-between;
   position: relative;
 }
-
 .accordion-trigger::after {
   content: url('../images/faq-img/arrow-accordion.svg'); 
   width: 32px; 
@@ -74,34 +70,26 @@
   transition: transform 0.2s ease; 
   transform-origin: center; 
 }
-
 .accordion.open .accordion-trigger::after {
   transform: scaleY(-1); 
 }
-
 .accordion-content {
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s linear;
 }
-
 .accordion.open .accordion-content {
   visibility: visible;
   opacity: 1;
 }
-
 .accordion-content__inner {
   padding-bottom: 20px;
   padding-top: 20px;
 }
-
 .accordion-content__inner p {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 300;
   font-size: 22px;
   line-height: 27px;
-  color: #FFFFFF;
   opacity: 0.8;
 }
 

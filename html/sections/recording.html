@@ -1,4 +1,6 @@
 <section class="recording" id="recording">
+    
+    <img class="anime-girl--mobile decor-img" src="./images/recording-img/girl-mobile.png" alt="decor-girl">
     <img class="recording-decor__girl decor-img" src="./images/recording-img/anime-girl.png" alt="decor-girl">
     <img class="recording-decor__butterfly decor-img" src="./images/recording-img/butterfly-decor.svg" alt="decor-butterfly">
     <div class="recording-container">
@@ -11,24 +13,28 @@
                 <p class="recording-content__text section-text section-text--lg">Если ты желаешь прокачать свою жизнь, изменив ее к лучшему, - заполни анкету, мы перезвоним и расскажем о студии </p>
                 <div class="recording-content__info">
                     <a class="recording-info__tel" href="tel:+380635671213">+(380) 63 567 1213</a>
-                    <div class="recording-info__address">г.Одесса ,Приморском район</div>
+                    <span class="recording-info__address">г.Одесса ,Приморском район</span>
                 </div>
             </div>
             <div class="registration-form__wrapper">
                 <form action="#" class="registration-form">
                     <div class="registration-form__group registration-form__group--first">
-                        <input class="registration-form__input registration-input" placeholder="Ваше имя" type="text">
-                        <input class="registration-form__input registration-input" placeholder="Ваш телефон" type="text">
+                        <input class="registration-form__input registration-input" placeholder="Ваше имя" type="text" required>
+                        <input id="phoneInput" class="registration-form__input registration-input registration-input__number" placeholder="Ваш телефон" type="number" pattern="[0-9]*" required>
+                
                     </div>
-                    <input class="registration-form__input registration-input" placeholder="Ваш e-mail" type="text">
-                    <textarea class="registration-form__textarea registration-input" placeholder="Введите ваш текст"></textarea>
+                    <input class="registration-form__input registration-input registration-input__number--mobile" placeholder="Ваш телефон" type="number" required>
+                    <input class="registration-form__input registration-input full-width" placeholder="Ваш e-mail" type="email" required>
+                    <textarea class="registration-form__textarea registration-input full-width" placeholder="Введите ваш текст" required></textarea>
                     <div class="registration-consent">
-                        <input type="checkbox" id="consent" name="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
                         <label for="consent">Согласие на обработку персональных данных</label>
                     </div>
-                    <button type="button" class="recording-submit btn">Отправить</button>
+                    <button type="submit" class="recording-submit btn">Отправить</button>
                 </form>
             </div>
+            <!-- <div id="errorMessage" style="display: none; color: red;"></div> -->
+            
         </div>
     </div>
 </section>
