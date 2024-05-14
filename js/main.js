@@ -263,3 +263,19 @@ modalCloseBtns.forEach((btn) => btn.addEventListener('click', (event) => {
 }));
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.querySelectorAll('.mobileMenu-link').forEach(link => {
+//     link.addEventListener('click', () => {
+//       document.querySelector('.mobileMenu-close').click();
+//     });
+//   });
+// });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.mobileMenu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.mobileMenu-close').click();
+    });
+  });
+});
