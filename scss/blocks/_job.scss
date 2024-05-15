@@ -1,18 +1,52 @@
 
 .job {
-    padding-top: 65px;
+    padding-top: 140px;
     padding-bottom: 35px;
     position: relative;
+    @media(max-width:768px){
+      padding-top: 80px;
+    }
     &-decor{
         &--circle{
             position: absolute;
             top: 245px;
             left: 100px;
+            @media(max-width:768px){
+              display: none;
+              
+            }
+        }
+        &--girl{
+          display: none;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; 
+          @media(max-width:768px){
+            display: block;
+            top: 60px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+          }
+        }
+        &--butterfly{
+          display: none;
+          @media(max-width:768px){
+            display: block;
+            top: 166px;
+            right: 30px;
+          }
         }
     }
 }
 .job-heading {
     margin-bottom: 65px;
+    @media(max-width:768px){
+      margin-bottom: 70px;
+    }
 }
 .swiper-vertical > .swiper-wrapper {
     flex-direction: row; 
@@ -22,12 +56,25 @@
   flex-direction: row; 
   margin-left: -21px;
   margin-right: -21px;
+  @media(max-width:768px){
+    margin: 0;
+  }
 }
-.swiper-slide {
+.job-slide{
   padding-left: 21px;
   padding-right: 21px;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
+  @media(max-width:1200px){
+    flex:0 50%;
+    max-width: 50%;
+  }
+  @media(max-width:768px){
+    flex: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
 }
 .job-item {
   min-height: 285px;
@@ -37,6 +84,14 @@
   background-size: cover; 
   background-position: center;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  @media(max-width:1200px){
+    padding: 68px 83px;
+  }
+  @media(max-width:768px){
+    padding: 68px 83px;
+  }
 }
 .job-slide__bottom {
     margin-top: 37px;
@@ -47,6 +102,10 @@
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
+  @media(max-width:768px){
+    text-align: center;
+    font-size: 27px;
+  }
 }
 .line-link {
   font-weight: 600;
@@ -56,29 +115,54 @@
   padding-left: 20px;
   position: relative;
   transition: 0.4s;
+  @media(max-width:768px){
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 68px;
+  }
 }
-.line-link:before {
-  content: "";
-  position: absolute;
-  background: #FF00B7;
-  height: 1px;
-  width: 65px;
-  left: -80px;
-  top: 50%;
-  transition: width 0.4s; 
+.line-link {
+  &:before{
+    content: "";
+    position: absolute;
+    background: #FF00B7;
+    height: 1px;
+    width: 65px;
+    left: -80px;
+    top: 50%;
+    transition: width 0.4s; 
+  }
+  @media(max-width:768px){
+    &:after{
+      content: "";
+      position: absolute;
+      background: #FF00B7;
+      height: 1px;
+      width: 65px;
+      right: -80px;
+      top: 50%;
+      transition: width 0.4s; 
+    }
+  } 
 }
 .line-link:hover {
+  @media(max-width:768px){
+    padding-left: 0;
+  }
   padding-left: 40px; 
 }
 .line-link:hover:before {
   width: 80px; 
+  @media(max-width:768px){
+   width: 0; 
+  }
 }
 
 //modal window 
 .JobModal {
+  z-index: 1002;
   display: none; 
   position: fixed; 
-  z-index: 1; 
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); 

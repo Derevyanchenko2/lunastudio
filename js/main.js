@@ -11,125 +11,6 @@ document.querySelector(".mobileMenu-close").addEventListener("click", function()
   document.body.style.overflowX = "auto";
 });
 
-//slider section reviews
-var swiper = new Swiper(".reviews-swiper", {
-  observer: true,
-  observeParents: true,
-  speed: 800,
-  initialSlide: 1,
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 3,
-  coverflowEffect: {
-      rotate: 0,
-      stretch: 62,
-      depth: 200,
-      modifier: 1,
-      slideShadows: false,
-  },
-  // breakpoints: {
-  //   // Когда ширина экрана меньше или равна 768px
-  //   1920: {
-  //     slidesPerView: 3,
-  //   },
-  //   768: {
-  //     slidesPerView: 2,
-  //   },
-  //   // Когда ширина экрана меньше или равна 576px
-  //   576: {
-  //     slidesPerView: 1,
-  //   }
-  // }
-});
-// slider section reviews
-var mySwiper = new Swiper('.team-swiper', {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 0,
-  speed: 1000,
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  coverflowEffect: {
-      rotate: 0,
-      stretch: 102,
-      depth: 150,
-      modifier: 1,
-      slideShadows: false,
-  },
-
-  // Navigation arrows
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
-
-});
-
-
-
-//slider section more-reviews
-var ReviewsSwiper = new Swiper(".moreReviews-swiper", {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 15,
-  speed: 800,
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 2,
-  initialSlide: 1,
-  coverflowEffect: {
-    rotate: 90,
-    stretch: 10,
-    modifier: 1,
-    slideShadows: false, 
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
-
-
-
-
-// //accordion section faq
-document.querySelectorAll(".accordion-trigger").forEach((accordionTrigger) => {
-  const accordionContent = accordionTrigger.nextElementSibling;
-  const accordionContentHeight = accordionContent.offsetHeight;
-  accordionContent.style.height = 0;
-
-  accordionTrigger.addEventListener("click", () => {
-    accordionContent.style.height = accordionContent.offsetHeight ? 0 : `${accordionContentHeight}px`;
-    accordionTrigger.parentElement.classList.toggle("open");
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('.mobileMenu-link.scroll-link');
-  
-  links.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      
-      var targetId = link.getAttribute('href');
-      var targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: 'smooth'
-        });
-        
-        var burgerMenu = document.querySelector('.burger-menu');
-        burgerMenu.classList.remove('open');
-      }
-    });
-  });
-});
-
 // calculator style
 let language = '';
 let shift = '';
@@ -235,6 +116,102 @@ window.onload = function() {
     selectShiftsPerWeek(6);
 };
 
+//Slider section reviews
+var swiper = new Swiper(".reviews-swiper", {
+  observer: true,
+  observeParents: true,
+  speed: 800,
+  initialSlide: 1,
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 3,
+  coverflowEffect: {
+      rotate: 0,
+      stretch: 62,
+      depth: 200,
+      modifier: 1,
+      slideShadows: false,
+  },
+  // breakpoints: {
+  //   // Когда ширина экрана меньше или равна 768px
+  //   1920: {
+  //     slidesPerView: 3,
+  //   },
+  //   768: {
+  //     slidesPerView: 2,
+  //   },
+  //   // Когда ширина экрана меньше или равна 576px
+  //   576: {
+  //     slidesPerView: 1,
+  //   }
+  // }
+});
+// slider section reviews
+// var mySwiper = new Swiper('.team-swiper', {
+//   observer: true,
+//   observeParents: true,
+//   spaceBetween: 0,
+//   speed: 1000,
+//   effect: 'coverflow',
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: 'auto',
+//   coverflowEffect: {
+//       rotate: 0,
+//       stretch: 102,
+//       depth: 150,
+//       modifier: 1,
+//       slideShadows: false,
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//   },
+
+// });
+
+
+
+//Slider section more-reviews
+// var ReviewsSwiper = new Swiper(".moreReviews-swiper", {
+//   observer: true,
+//   observeParents: true,
+//   spaceBetween: 15,
+//   speed: 800,
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: 2,
+//   initialSlide: 1,
+//   coverflowEffect: {
+//     rotate: 90,
+//     stretch: 10,
+//     modifier: 1,
+//     slideShadows: false, 
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
+
+
+//Accordion section FAQ
+document.querySelectorAll(".accordion-trigger").forEach((accordionTrigger) => {
+  const accordionContent = accordionTrigger.nextElementSibling;
+  const accordionContentHeight = accordionContent.offsetHeight;
+  accordionContent.style.height = 0;
+
+  accordionTrigger.addEventListener("click", () => {
+    accordionContent.style.height = accordionContent.offsetHeight ? 0 : `${accordionContentHeight}px`;
+    accordionTrigger.parentElement.classList.toggle("open");
+  });
+});
+
+
+//Modal window section Job.Page vacancies
 const modals = document.querySelectorAll('.JobModal');
 const modalBtns = document.querySelectorAll('.line-link.job-details');
 const modalCloseBtns = document.querySelectorAll('.close-icon');
@@ -263,15 +240,44 @@ modalCloseBtns.forEach((btn) => btn.addEventListener('click', (event) => {
 }));
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.querySelectorAll('.mobileMenu-link').forEach(link => {
-//     link.addEventListener('click', () => {
-//       document.querySelector('.mobileMenu-close').click();
-//     });
-//   });
+// var JobSwiper = new Swiper('.job-swiper', {
+//   observer: true,
+//   loop: false,
+//   slidesPerView: 3,
+//   spaceBetween: 30,
+//   speed: 1000,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   },
+// 
 // });
 
+// var swiper = new Swiper('.swiper', {
+//   // direction: 'horizontal',
+//   observer: true,
+//   loop: false,
+//   speed: 1000,
 
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+//  
+
+// });
+var BlogSwiper = new Swiper('.job-swiper', {
+  observer: true,
+  observeParents: true,
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  speed: 800,
+
+  navigation: {
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
+  },
+});
+// Scroll-link
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.mobileMenu-link').forEach(link => {
     link.addEventListener('click', () => {

@@ -7,6 +7,9 @@
 }
 .gifts-heading__text{
     margin-top: 35px;
+    @media(max-width:768px){
+        font-size: 16px;
+    }
 }
 .gifts-wrapper {
     position: relative;
@@ -16,10 +19,16 @@
     bottom: 260px;
     max-width: 195px;
     right: -80px;
+    @media(max-width:768px){
+        width: 137px;
+        height: auto;
+        right: 0;
+    }
 }
 .gifts-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -28,6 +37,32 @@
     max-width: 33.333333%;
     padding-left: 15px;
     padding-right: 15px;
+    @media(max-width:992px){
+        flex:0  0 50%;
+        max-width: 50%;
+        &:not(:last-child){
+            margin-bottom: 65px;
+        }
+    }
+   
+    @media(max-width:768px){
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+}
+.gifts-item__img{
+    img{
+        background: linear-gradient(0deg, rgba(65, 24, 120, 0.2), rgba(65, 24, 120, 0.2)), url(rm423-b25-g-mockup.jpg);
+        mix-blend-mode: normal;
+        box-shadow: 0px 4px 29px #4A05AE;
+        border-radius: 15px;
+    }
+    @media(max-width:1365px){
+        max-width: 330px;
+        img{
+            width: 100%;
+        }
+    }
 }
 .gifts-item__text {
     padding: 0 15px;
@@ -35,6 +70,10 @@
     max-width: 374px;
     width: 100%;
     text-align: center;
+    @media(max-width:768px){
+        padding: 0;
+        max-width: 315px;
+    }
 }
 
 .gift-styling__text{
@@ -44,5 +83,10 @@
     line-height: 39px;
     span{
         text-shadow: 0px 4px 9px #FF00B7;
+    }
+    @media(max-width:768px){
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
     }
 }
